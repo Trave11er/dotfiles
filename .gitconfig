@@ -1,0 +1,11 @@
+[user]
+	name = Gleb Siroki
+	email = 5238128+Trave11er@users.noreply.github.com
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	br = branch
+	ci = commit
+	co = checkout
+[core]
+	editor = vim
+	autocrlf = input
