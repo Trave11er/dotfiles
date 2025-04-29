@@ -1,0 +1,11 @@
+# place in your home dir or root of your git repo
+map-tokens: 0
+auto-commits: false
+gitignore: false
+analytics: false
+check-update: false
+auto-test: false
+#test-cmd: 
+
+model: anthropic/claude-3-7-sonnet-20250219
+show-model-warnings: false
