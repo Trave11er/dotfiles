@@ -66,6 +66,7 @@ alias historya='eval $(history | cut -c 8- | fzf)'
 alias killa="ps aux | fzf --multi | awk '{print $2}' | xargs kill -9"
 alias cda='cd $(find . -type d | fzf)'
 alias suspend='systemctl suspend'
+[[ -s /usr/share/autojump/autojump.sh ]] && . /usr/share/autojump/autojump.sh
 
 # ai
 export AIDER_OPTIONS="--map-tokens 0 --no-analytics --no-auto-commits --no-gitignore --no-check-update --edit-format diff"
