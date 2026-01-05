@@ -106,3 +106,7 @@ jrep() {
      -e 's/^--$/🔸 ---------------------/' \
      -e "s/$search_term/\x1b[1;31m&\x1b[0m/gi"
 }
+
+# requires curl -LsSf https://astral.sh/uv/install.sh | sh
+alias markitdown="uvx markitdown[pdf]"
+alias gitingest="uvx gitingest"
