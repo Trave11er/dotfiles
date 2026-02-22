@@ -68,12 +68,6 @@ alias cda='cd $(find . -type d | fzf)'
 alias suspend='systemctl suspend'
 [[ -s /usr/share/autojump/autojump.sh ]] && . /usr/share/autojump/autojump.sh
 
-# ai
-export AIDER_OPTIONS="--map-tokens 0 --no-analytics --no-auto-commits --no-gitignore --no-check-update --edit-format diff"
-alias aiderg="aider --model gpt-4o $AIDER_OPTIONS"
-alias aiderc="aider --model claude-3-7-sonnet-20250219 $AIDER_OPTIONS"
-alias whisper='/home/gleb/whisper.cpp/stream -m /home/gleb/whisper.cpp/models/ggml-base.en.bin -t 8 --step 500 --length 5000 -f /home/gleb/whisper.cpp/output.txt'
-alias wakesound="python /home/gleb/programming/play/wakesound/wakesound.py"
 alias arduino="cd /home/gleb/arduino-ide_2.0.3_Linux_64bit && ./arduino-ide"
 
 # joplin
@@ -108,5 +102,5 @@ jrep() {
 }
 
 # requires curl -LsSf https://astral.sh/uv/install.sh | sh
-alias markitdown="uvx markitdown[pdf]"
-alias gitingest="uvx gitingest"
+alias markitdown="uvx markitdown[pdf]@0.1.0"
+alias gitingest="uvx gitingest@0.3.1"
