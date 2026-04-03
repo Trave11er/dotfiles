@@ -1,0 +1,4 @@
+- Give a 3 sentence summary of the conversation so far
+    - What is the topic and overall context
+    - What was the latest thing done and where we stopped
+    - What is the next step(s)

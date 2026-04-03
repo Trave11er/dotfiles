@@ -1,0 +1,5 @@
+- Given the plan, parallelise it by splitting it into subplans so 2-3 workers can execute it simultaneously.
+- Each subplan should contain some steps from the original plan that are possible to execute without conflicts with others. Write the plan to .md file including:
+    - relevant steps
+    - instruct to work in a separate worktree
+    - how it fits into the picture and relates to other subplans

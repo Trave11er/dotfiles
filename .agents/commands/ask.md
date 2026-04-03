@@ -1,0 +1,3 @@
+- Answer the question, do not modify any files.
+- Provide evidence - something that user can easily check.
+- If the user seems forgetting/misunderstanding, explain gap in expectations and tell why this behavior is normal/a design choice.

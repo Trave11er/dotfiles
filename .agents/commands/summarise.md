@@ -1,0 +1,3 @@
+- Summarise the text above.
+- Give up to 5 bullet points in bold
+- Each bullet point can 1-3 concise subsentences
