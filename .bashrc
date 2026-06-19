@@ -16,31 +16,13 @@ function git_backup {
 
 alias giff='git diff'
 alias giffs='git diff --staged'
-alias giow='git show'
 alias giu='git add -u'
 alias gine='git commit --amend --no-edit'
 alias giune='git add -u && git commit --amend --no-edit'
 alias gibu='git_backup'
 alias gist='git status'
-alias gisreset='git submodule deinit -f . && git submodule update --init'
 
 # python
-function __conda_init() {
-    __conda_setup="$('/home/gleb/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-    eval "$__conda_setup"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-    else
-        if [ -f "/home/gleb/anaconda3/etc/profile.d/conda.sh" ]; then         
-            . "/home/gleb/anaconda3/etc/profile.d/conda.sh"
-        else
-            export PATH="/home/gleb/anaconda3/bin:$PATH"
-        fi
-    fi
-    unset __conda_setup
-}
-
-alias condainit='__conda_init'
 alias sact='source .venv/bin/activate'
 
 # shell
@@ -54,21 +36,17 @@ function cdup() {
 
 alias mv='mv -i'
 alias cp='cp -i'
-alias gr='grep -rn . -e '
-alias gi='grep -i '
 alias rc="batcat"
 alias vima='vim $(fzf)'
-alias aptd='sudo apt-get update'
-alias aptg='sudo apt-get upgrade && dist-upgrade'
-alias apti='sudo apt-get install'
-alias aptr='sudo apt-get remove'
 alias historya='eval $(history | cut -c 8- | fzf)'
 alias killa="ps aux | fzf --multi | awk '{print $2}' | xargs kill -9"
 alias cda='cd $(find . -type d | fzf)'
 alias suspend='systemctl suspend'
 [[ -s /usr/share/autojump/autojump.sh ]] && . /usr/share/autojump/autojump.sh
 
-alias arduino="cd /home/gleb/arduino-ide_2.0.3_Linux_64bit && ./arduino-ide"
+export PI='pi.local'
+alias ssp='ssh pi@$PI'
+alias arduino="cd $HOME/arduino-ide_2.0.3_Linux_64bit && ./arduino-ide"
 
 # joplin
 jrep() {
@@ -105,3 +83,7 @@ jrep() {
 export UV_EXCLUDE_NEWER="$(date -d '30 days ago' '+%Y-%m-%d')"  # quarantine new packages
 alias markitdown="uvx markitdown[pdf]@0.1.0"
 alias gitingest="uvx gitingest@0.3.1"
+
+# python scripts (ask.py is symlinked here by install.sh; ~/.local/bin is put on
+# PATH by ~/.profile / the environment, so no export needed here)
+alias ask='uv run --with "openai==2.36.0" "$HOME/.local/bin/ask.py"'
