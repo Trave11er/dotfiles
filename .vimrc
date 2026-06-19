@@ -11,14 +11,14 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 " https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " :PlugInstall
-call plug#begin()
-Plug 'preservim/NERDTree'
-Plug 'shougo/neocomplete.vim'
-call plug#end()
+" call plug#begin()
+" Plug 'preservim/NERDTree'
+" Plug 'shougo/neocomplete.vim'
+" call plug#end()
 
 " ctrl + n for nerdtree
-nnoremap <C-n> :NERDTreeToggle<CR>
+" nnoremap <C-n> :NERDTreeToggle<CR>
 
 " tab for autocompletion
-let g:neocomplete#enable_at_startup = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" let g:neocomplete#enable_at_startup = 1
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
