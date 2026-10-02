@@ -27,3 +27,12 @@ Pass one or more flags to run only those steps:
 | `-h`, `--help` | Show usage and exit |
 
 After installing, restart your shell or run `source ~/.bashrc`.
+
+## Skill categories
+
+Skills live in `skills/<category>/<name>/SKILL.md`; the install flattens the category away.
+
+- **prime** — a keyword that brings forth knowledge or adds a property to how another command runs; does nothing on its own.
+- **tick** — one simple command, a single tickbox or node with a clear output.
+- **dag** — work handed off to subagents, combining several ticks and primes.
+- **chat** — user interaction only; the user is present throughout.
